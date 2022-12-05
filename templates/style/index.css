@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+body {
+  height: 100vh;
+  margin: 0px;
+  font-family: 'Lato';
+  background: rgba(37, 49, 59, 1);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+a {
+  font-family: 'Lato';
+  color: white;
+  letter-spacing: 0.1em;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#qr-info {
+  letter-spacing: 1.5px;
+  font-size: 15px;
+}
+
+#trigger {
+  display: none;
+}
+
+.links > div:hover {
+  cursor: pointer; 
+}
+
+.links > div {
+  padding: 5px;
+}
+
+.logo {
+  width: 50px;
+}
+
+.app-name {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.links {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  font-size: 18px;
+}
+
+.qr-container {
+  display: block;
+  margin-bottom: 1.5em;
+}
+
+.qr {
+  object-fit: cover;
+  width: 20em;
+  height: 20em;
+  object-position: center;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.div-button {
+  border: 2px white solid;
+  border-radius: 5px;
+  display: inline-block;
+  width: 90px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  padding-block: auto;
+  vertical-align: middle;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  flex-direction: column;
+}
+
+.info {
+  letter-spacing: 0.1em;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.info-container {
+  min-width: 400px;
+  min-height: 334px;
+  border: 2px white solid;
+  border-radius: 5px;
+  margin-right: 48px;
+  padding: 10px;
+}

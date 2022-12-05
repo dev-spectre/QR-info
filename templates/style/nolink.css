@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+body {
+  height: 100vh;
+  margin: 0px;
+  font-family: 'Lato';
+  background: rgba(37, 49, 59, 1);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+a {
+  font-family: 'Lato';
+  color: white;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+}
+
+div {
+  padding: 20px;
+  max-width: 100%;
+  align-self: center;
+}
+
+#qr-info {
+  letter-spacing: 1.5px;
+  font-size: 15px;
+}
+
+#data {
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+.home {
+  width: 25px;
+  margin: 20px;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.app-name {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 5px;
+  display: inline-block;
+  letter-spacing: 0.01em;
+  padding: 0px;
+}

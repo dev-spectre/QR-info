@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0px;
+  background: rgba(37, 49, 59, 1);
+  font-family: 'Lato';
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  letter-spacing: 0.05em;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+header {
+  display: flex;
+  padding-inline: 10px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+a {
+  color: white;
+  display: block;
+  letter-spacing: 0.08em;
+}
+
+p {
+  margin: 19px;
+  text-align: center;
+}
+
+textarea {
+  text-align: start;
+  padding: 20px;
+  background: rgba(37, 49, 59, 1);
+  min-height: 90px;
+  max-height: 320px;
+  max-width: 700px;
+  width: 700px;
+  color: white;
+  letter-spacing: 0.04em;
+  border: 1px white solid;
+  border-radius: 5px;
+  display: flex;
+  margin: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#data {
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+#qr-info {
+  letter-spacing: 1.5px;
+  font-size: 15px;
+}
+
+#note {
+  font-size: 15px;
+  color: rgb(141, 148, 161);
+  margin: 20px;
+}
+
+#site-name {
+  margin: 20px;
+}
+
+.home {
+  width: 25px;
+  margin: 20px;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.app-name {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 5px;
+  display: inline-block;
+  letter-spacing: 0.01em;
+}
+
+.div-button {
+  border: 2px white solid;
+  border-radius: 5px;
+  display: inline-block;
+  height: 35px;
+  width: 150px;
+  line-height: 35px;
+  text-align: center;
+  padding-block: auto;
+  vertical-align: middle;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  padding-inline: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+

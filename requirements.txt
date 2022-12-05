@@ -1,0 +1,5 @@
+openai
+eel
+mysql-connector-python
+opencv-python
+qrcode[pil]
