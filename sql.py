@@ -2,6 +2,10 @@ import mysql.connector as mysql
 
 password = ""
 
+def update_password(passwd):
+    global password
+    password = passwd
+
 def get_pass():
     global password
     
@@ -32,6 +36,7 @@ def connect_to_database(password):
         print("Invalid password for user root\n")
         password = input("MySQL password: ")
         conn = connect_to_database(password)
+        update_password(password)
     return conn
 
 def get_info(url):
