@@ -69,6 +69,7 @@ def scan_qr():
         result = sql.get_info(domain)
 
         if result is None:
+            eel.addNote()
             info = website.get_info_from_ai(short_url)
             json_object = {
                 "page"   : "qrinfo.html",

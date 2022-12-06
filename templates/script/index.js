@@ -25,6 +25,14 @@ function setImage(filePath) {
   img.src = filePath;
 }
 
+eel.expose(addNote);
+function addNote() {
+  const note = document.getElementById("note-container");
+  note.style["display"] = "block";
+  note.style["textAlign"] = "center";
+  note.innerText = "Fetching information...";
+}
+
 const scanButton = document.getElementById("scan-button");
 if (scanButton) {
   scanButton.addEventListener("click", () => {
