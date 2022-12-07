@@ -32,11 +32,26 @@ def connect_to_database(password):
                 password = password,
                 database = "qrinfo"
                 )
-    except mysql.errors.ProgrammingError:
-        print("Invalid password for user root\n")
-        password = input("MySQL password: ")
-        conn = connect_to_database(password)
-        update_password(password)
+    except mysql.errors.ProgrammingError as err:
+        if err.errno == 1045:
+            print("Invalid password for user root\n")
+            password = input("MySQL password: ")
+            conn = connect_to_database(password)
+            update_password(password)
+        conn = mysql.connect(
+                host = "localhost",
+                user = "root",
+                password = password,
+                )
+        cursor = conn.cursor()
+        cursor.execute("CREATE DATABASE IF NOT EXISTS qrinfo")
+        conn.close()
+        conn = mysql.connect(
+                host = "localhost",
+                user = "root",
+                password = password,
+                database = "qrinfo"
+                )
     return conn
 
 def get_info(url):

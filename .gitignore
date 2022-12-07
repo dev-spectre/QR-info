@@ -2,3 +2,4 @@ packages/
 templates/script/data.json
 *.pyc
 *.json
+*.pyc
