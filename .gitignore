@@ -1,4 +1,4 @@
-
+packages/
 *.png
 templates/script/data.json
 *.pyc
