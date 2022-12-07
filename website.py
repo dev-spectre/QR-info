@@ -14,7 +14,6 @@ def deshuffle(shuffled_str):
 
 openai.api_key = deshuffle("sl/[GU|y[Wdm[^xv\RzkK[}chrnWXxyx|]d§©f")
     
-
 def get_info_from_ai(url):
     response = openai.Completion.create(
       model = "text-davinci-003",
@@ -34,8 +33,9 @@ def get_info_from_ai(url):
 def get_short_url(url):
     if url is None:
         return
+    
     short_url = None
-    if "https://" in url:
+    if url.startswith("https://"):
         short_url = "https://"
         for i in range(8, len(url)):
             if url[i] != "/":
@@ -44,7 +44,7 @@ def get_short_url(url):
                 break
         short_url += "/"
         
-    if "http://" in url:
+    elif url.startswith("http://"):
         short_url = "http://"
         for i in range(7, len(url)):
             if url[i] != "/":
@@ -52,6 +52,7 @@ def get_short_url(url):
             else:
                 break
         short_url += "/"
+        
     return short_url
 
 
