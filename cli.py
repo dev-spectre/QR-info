@@ -1,3 +1,4 @@
+import setup
 import website
 import sql
 import qr
@@ -21,20 +22,25 @@ def display_selected_file(file_path):
     if file_name:
         print()
         print("Selected file:", file_name, end = "\n\n\n")
-    else:
-        print("Invalid file format")
-        print("Supported formats are png, jpg and jpeg", end = "\n\n")
+        return True
+    print()
+    print("Invalid file format")
+    print("Supported formats are png, jpg and jpeg", end = "\n\n")
+    return False
 
 def scan_qr():
     file_path = get_file_path()
+    is_file_selected = False
     if not file_path:
-        return
-    display_selected_file(file_path)
+        return "", file_selected
+    is_file_selected = display_selected_file(file_path)
+    if not is_file_selected:
+        return "", is_file_selected
     data = qr.get_data(file_path)
-    return data
+    return data, is_file_selected
 
-def is_url(string):
-    if string.startswith("https://") or string.startswith("http://"):
+def is_url(url):
+    if url.startswith("https://") or url.startswith("http://"):
         return True
     return False
 
