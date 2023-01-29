@@ -40,9 +40,7 @@ def scan_qr():
     return data, is_file_selected
 
 def is_url(url):
-    if url.startswith("https://") or url.startswith("http://"):
-        return True
-    return False
+    return url.startswith("https://") or url.startswith("http://")
 
 def get_site_info(url):
     domain = website.extract_domain(url)
