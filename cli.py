@@ -32,7 +32,7 @@ def scan_qr():
     file_path = get_file_path()
     is_file_selected = False
     if not file_path:
-        return "", file_selected
+        return "", is_file_selected
     is_file_selected = display_selected_file(file_path)
     if not is_file_selected:
         return "", is_file_selected
